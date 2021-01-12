@@ -3,30 +3,23 @@ spring:
     name: Spring-shop
   profiles:
     active: local
+  # schma de batch à initialiser
+  batch:
+    initialize-schema: always
   jta:
     enabled: false
   jpa:
-    mapping-resources: 
-      - META-INF/common.orm.hbm.xml
-      - META-INF/customer.orm.hbm.xml  
+    mapping-resources:
+       - META-INF/common.orm.hbm.xml
+       - META-INF/customer.orm.hbm.xml
     open-in-view: false
     driver-class-name: org.postgresql.Driver
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: create
-  cache: 
-    jcache:
-      config: classpath:cache/ehcache.xml
-      
+
 logging:
   level:
     ROOT: INFO
     org.springframework: INFO
     fr.training.samples.spring.shop: INFO
-    
-#Monitoring endpoints   
-management:
-  endpoints:
-    web:
-      exposure:
-        include: info, health, configprops, logfile, metrics, env, loggers, heapdump

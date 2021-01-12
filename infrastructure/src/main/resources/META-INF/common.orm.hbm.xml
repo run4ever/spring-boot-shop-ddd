@@ -10,7 +10,9 @@
 		class="fr.training.samples.spring.shop.domain.common.entity.AbstractBaseEntity">
 		<attributes>
 			<id name="id" />
-			<version name="version" />
+			<version name="version" >
+				<column nullable="false" />
+			</version>
 		</attributes>
 	</mapped-superclass>
 
