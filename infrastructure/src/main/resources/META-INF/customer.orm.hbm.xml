@@ -4,6 +4,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
 
+	<!--ce fichier permet d'enlever les annotations dans les entity du domaine pour isoler la couche domaine-->
+	<!--par contre ce n'est valable qu'avec des modeles relationnels, pas avec les services web par exemple-->
+	<!--donc vaut mieux utiliser les classes JPA dans infra avec Adapter/Mapper-->
+
 	<access>FIELD</access>
 
 	<entity

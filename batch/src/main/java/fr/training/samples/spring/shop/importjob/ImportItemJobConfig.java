@@ -89,6 +89,10 @@ public class ImportItemJobConfig {
                 .reader(importReader(null)) //
                 .processor(importProcessor()) //
                 .writer(importWriter()) ///
+                //.faultTolerant()
+                //.skipLimit(2)
+                //.skip(FlatFileParseException.class)
+                //.listener(new MySkipListener<>(new File("rejets.txt")))
                 .build();
     }
 
